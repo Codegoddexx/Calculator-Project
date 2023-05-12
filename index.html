@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="calculator">
+        
+        <div class="screen">
+            <div class="theme-toggler dark" onclick="toggleDarkMode()">
+            <i class="fa fa-moon-o" aria-hidden="true"></i>
+          </div>
+            <p class="prescreen"></p>
+            <p class="anscreen"></p>
+        </div>
+        <!-- <div type="text" class="screen" placeholder="0"></div> -->
+        <!-- <textarea type="text" class="screen anscreen" placeholder="0"></textarea> -->
+        <div class="buttons"> 
+            <button class="keys operator clear invisible">C</button>
+            <button class="keys operator" value="/">&#xF7;</button>
+            <button class="keys operator">-</button>
+            <button class="keys operator del invisible">DEL</button>
+            <button class="keys key">7</button>
+            <button class="keys key">8</button>
+            <button class="keys key">9</button>
+            <button class="keys operator" value="*">×</button>
+            <button class="keys key">4</button>
+            <button class="keys key">5</button>
+            <button class="keys key">6</button>
+            <button class="keys operator raise"><em>x²</em></button>
+            <button class="keys key">1</button>
+            <button class="keys key">2</button>
+            <button class="keys key">3</button>
+            <button class="keys operator" value="+">+</button>
+            <button class="keys key">0</button>
+            <button class="keys key">.</button>
+            <button class="keys operator invisible" id="equalTo">=</button>
+        </div>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>

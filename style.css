@@ -1,0 +1,201 @@
+* {
+box-sizing: border-box;
+}
+
+body{
+    background-color: #732910;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='99' height='99' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='100' y1='33' x2='100' y2='-3'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='1'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='100' y1='135' x2='100' y2='97'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='%23671f05' fill-opacity='0.6'%3E%3Crect x='100' width='100' height='100'/%3E%3Crect y='100' width='100' height='100'/%3E%3C/g%3E%3Cg fill-opacity='0.5'%3E%3Cpolygon fill='url(%23a)' points='100 30 0 0 200 0'/%3E%3Cpolygon fill='url(%23b)' points='100 100 0 130 0 100 200 100 200 130'/%3E%3C/g%3E%3C/svg%3E");
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+
+.calculator {
+    box-shadow: 0px 17px 19px 0px rgba(0,0,0,0.56);
+    background-color: rgb(24, 21, 21);
+    border-radius: 10px;
+    max-width: 375px;
+    max-height: 600px;
+    padding:1.5em 1.5em 1em 1.5em;
+   
+/* background-color: rgba( 167,167,167, 0.2);
+backdrop-filter: blur(2px);
+-webkit-backdrop-filter: blur(10px);
+border-radius: 10px;
+border: 1px solid rgba( 167,167,167, 0.5); */
+}
+
+ 
+.screen {
+    /* box-shadow: 2px -3px 52px 6px rgba(0,0,0,0.3) inset; */
+    /* background-color: rgb(24, 21, 21); */
+    background: transparent;
+    color: black;
+    border: none;
+    /* border-radius: 5px; */
+    /* font-size: 2em; */
+    padding: 0px;
+    text-align: right;
+    width: 100%;
+    height: 10rem;
+    /* overflow: scroll; */
+    /* outline: none;
+    resize: none; */
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column; 
+    word-wrap: break-word;
+    word-break: break-all; 
+  }
+  .screen::-webkit-scrollbar {
+    display: none;
+  }
+
+  .screen .prescreen {
+    color: rgb(179, 176, 176);
+    font-size: 1.5rem;
+  }
+
+  .screen .anscreen {
+    color: white;
+    font-size: 2rem;
+    margin-top: 0%;
+  }
+
+.anscreen{
+  overflow: hidden;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+     height: 60%;  
+    gap: 10px;
+    align-items: center; 
+    justify-content: space-between;
+   
+}
+
+.keys {
+  
+    padding: 1.0em;
+    /* color: rgb(101, 120, 139); */
+    color: #fff;
+}
+.keys:hover {
+    box-shadow: 2px -3px 52px 6px rgba(0,0,0,0.3) inset;
+    border-radius: 1em;
+}
+
+
+  .key {
+    border: none;
+    cursor: pointer;
+    font-size: 1.5em;
+    background: transparent;
+    /* background-color: rgb(24, 21, 21); */
+  }
+.key:hover {
+    color: white;
+    font-weight: 900;
+}
+
+  .operator {
+    all: unset;
+   background-color: rgba(0, 0, 0, 0.24);
+    cursor: pointer;
+    font-size: 1.5em;
+    margin: 0.1em;
+    border: none;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    color: rgb(101, 120, 139);
+    text-align: center;
+  }
+  .operator:hover {
+    color: blueviolet;
+    font-weight: 900;
+}
+
+
+#equalTo  {
+    grid-column: span 2;
+    background-color: black;
+}
+#equalTo:hover {
+    background-color:rgb(12, 165, 12);
+    color: blue;
+    transition: 0.5s;
+    font-weight: 900;
+}
+
+
+.del {
+    /* color: rgb(141, 6, 6); */
+    color: red;
+}
+.del:hover {
+  font-weight: 900;
+  color: red;
+}
+
+.clear {
+  /* color: rgb(141, 6, 6); */
+  color: red;
+}
+.clear:hover {
+  color: red;
+  font-weight: 900;
+}
+
+
+ .theme-toggler {
+  /* position: absolute; */
+  /* top: 7px; */
+  /* right: 35px; */
+  /* color: #fff; */
+  cursor: pointer;
+  z-index: 1;
+  /* background-color: white; */
+  /* width: 4rem; */
+  /* height: 4rem; */
+  /* border-radius: 50%; */
+  /* box-shadow: 0.2px 0px 7px 1.4px rgba(0, 0, 0, 0.2); */
+}
+
+.fa-moon-o {
+  /* position: relative; */
+  /* top: -4px; */
+  color: orangered;
+}
+
+
+/* light theme */
+
+.calculator {
+  background-color: rgb(71, 71, 4);
+  font-size: 1rem;
+  color: black;
+}
+
+.calculator #display-prob,
+.calculator #display-soln {
+  color: #0a1e23;
+}
+
+/* dark theme */
+.calculator.dark {
+  background-color: #071115;
+  color:black;
+}
+
+.calculator.dark #display {
+  color:black;
+}
